@@ -1,0 +1,47 @@
+.contenedor{
+    width: 300px;
+    border: 1px solid black;
+    margin:100px auto;
+    padding: 20px;
+}
+#display{
+    border: 1px solid black;
+    min-height: 50px;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+.valores{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+
+}
+.valor{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#operador{
+    min-width: 80px;
+    max-width: 80px;
+    min-height:50px;
+    max-height:53px;
+    border: 1px solid black;
+    font-size:50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grupo-btn{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+}
