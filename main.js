@@ -8,13 +8,30 @@ function capturar(){
 function visualizar(op){
     operador.innerText=op
 }
-function sumar(){
-
+function AC(){
+    operador.innerText="";
+    val1.value="";
+    val2.value="";
+    display.innerHTML="";
 }
 function resultado(){
     if(operador.innerText!="" && val1.value!="" && val2.value !=""){
         capturar();
-        display.innerHTML=val_1+val_2;
+        switch(operador.innerHTML){
+            case "+":
+                display.innerHTML=val_1+val_2;
+                break
+            case "-":
+                display.innerHTML=val_1-val_2;
+                break
+            case "x":
+                display.innerHTML=val_1*val_2;
+                break
+            case "/":
+                (val_2==0)?display.innerHTML="infinito":display.innerHTML=val_1/val_2;
+            break
+        }
+        
     }
 }
 let val1=document.getElementById("val-1");
@@ -34,4 +51,4 @@ resta.addEventListener("click",()=>{visualizar("-")});
 multi.addEventListener("click",()=>{visualizar("x")});
 division.addEventListener("click",()=>{visualizar("/")});
 igual.addEventListener("click",resultado);
-//borrar.addEventListener("click",);
+borrar.addEventListener("click",AC);
