@@ -12,11 +12,9 @@
     text-align: center;
     font-weight: bold;
 }
-.valores{
-    display: flex;
-    justify-content: center;
-    gap:10px;
-    margin: 20px 0px;
+.btns-num{
+    margin: 10px 0;
+    padding: 0 15px;
 
 }
 .valor{
