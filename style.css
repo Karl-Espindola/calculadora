@@ -14,7 +14,8 @@
 }
 .valores{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap:10px;
     margin: 20px 0px;
 
 }

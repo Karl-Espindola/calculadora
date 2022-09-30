@@ -1,41 +1,48 @@
 let val_1=0;
-let val_2=0;
+let valAnterior=false;
+
 
 function capturar(){
     val_1=parseFloat(val1.value);
-    val_2=parseFloat(val2.value);
+    
 }
 function visualizar(op){
-    operador.innerText=op
+    if(val1.value!=""){
+        operador.innerText=op;
+        capturar();
+        valAnterior=val_1;
+        val1.value="";
+    }
+    
 }
 function AC(){
     operador.innerText="";
     val1.value="";
-    val2.value="";
     display.innerHTML="";
 }
 function resultado(){
-    if(operador.innerText!="" && val1.value!="" && val2.value !=""){
+    if(operador.innerText!="" && val1.value!="" && valAnterior ){
+
         capturar();
         switch(operador.innerHTML){
             case "+":
-                display.innerHTML=val_1+val_2;
+                display.innerHTML=valAnterior+val_1;
                 break
             case "-":
-                display.innerHTML=val_1-val_2;
+                display.innerHTML=valAnterior-val_1;
                 break
             case "x":
-                display.innerHTML=val_1*val_2;
+                display.innerHTML=valAnterior*val_1;
                 break
             case "/":
-                (val_2==0)?display.innerHTML="infinito":display.innerHTML=val_1/val_2;
+                (val_1==0)?display.innerHTML="infinito":display.innerHTML=valAnterior/val_1;
             break
         }
         
     }
 }
 let val1=document.getElementById("val-1");
-let val2=document.getElementById("val-2");
+
 let operador=document.getElementById("operador");
 let display=document.getElementById("display");
 
