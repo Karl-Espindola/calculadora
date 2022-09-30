@@ -26,10 +26,6 @@ function ponerEnPantalla(i){
         
     } 
 }
-function capturar(){
-    val_1=parseFloat(display.innerText);
-    
-}
 
 function operacion(op){
     operador=op;
@@ -49,7 +45,7 @@ function resultado(){
     if(display.innerText!="" ){
         val_1=parseFloat(val_1);
         val_2=parseFloat(val_2);
-        
+
         switch(operador){
             case "+":
                 display.innerHTML=val_1+val_2;
